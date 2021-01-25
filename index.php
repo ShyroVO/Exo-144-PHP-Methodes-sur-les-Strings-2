@@ -26,9 +26,12 @@ echo "<br><br>";
 
 // 4
 $text4 = "Text de mon choix";
-/* Transformez cette chaine de caractères à l'aide de la bonne fonction
-Utilisez une boucle pour afficher chaque mot ( entrée du tableau )
-du retour de la fonction sur une ligne pour chaque mot ( 1 ligne par mot ) */
+$tab4 = explode(" ", $text4);
+
+foreach ($tab4 as $value){
+    echo $value . "<br>";
+}
+echo "<br>";
 
 // 5
 $tableau5 = ["Cheval", "Chien", "Chat"];
@@ -53,9 +56,8 @@ echo "<br><br>";
 //8
 $text8 = "Le texte de votre choix.";
 if (strlen($text8) < 500){
-    echo "pas 500";
+    echo " | " . $text8;
 }
-//Faites en sorte qu'à gauche du texte, le caractère | s'affiche tant que la chaine ne fait pas 500 de longueur.
 echo "<br><br>";
 
 // 9
