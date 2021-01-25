@@ -22,6 +22,7 @@ echo "<br>";
 // 3
 $text3 = "1 2 3 4 5 6 7 8 9 10 11 12 13 14 115 16 17 18 19 20 21 22 23 24 25";
 echo strlen($text3);
+echo "<br><br>";
 
 // 4
 $text4 = "Text de mon choix";
@@ -31,48 +32,67 @@ du retour de la fonction sur une ligne pour chaque mot ( 1 ligne par mot ) */
 
 // 5
 $tableau5 = ["Cheval", "Chien", "Chat"];
+$tableau55 = implode($tableau5);
+echo $tableau55;
+echo "<br><br>";
 
+// 6
+$text6 = "Le texte de votre choix.";
+$text66 = strrev($text6);
+echo $text66;
+echo "<br><br>";
 
+// 7
+$hello = "Hello, nous apprenons PHP";
+echo $hello;
+echo "<br>";
+$hello = strip_tags($hello);
+echo $hello;
+echo "<br><br>";
 
-/*
-Exo 5
-Créez un tableau contenant une liste de mots
-Faites en sorte avec la bonne méthode de rassembler toutes
-les entrées du tableau pour ne former qu'une seule chaîne de caractères.
+//8
+$text8 = "Le texte de votre choix.";
+if (strlen($text8) < 500){
+    echo "pas 500";
+}
+//Faites en sorte qu'à gauche du texte, le caractère | s'affiche tant que la chaine ne fait pas 500 de longueur.
+echo "<br><br>";
 
-Exo 6
-Créez une chaîne de caractères avec le texte de votre choix
-Affichez le résultat de cette chaîne mais renversée, utilisez la fonction appropriée.
-Affichez ensuite la chaîne dans un ordre aléatoire avec shuffle
+// 9
+$text9 = "Text de votre choix";
+$tableau9 = str_split($text9);
+foreach ($tableau9 as $item){
+    echo "$item <br>";
+}
+echo "<br><br>";
 
-Exo 7
-Enregistrer le texte "Hello, nous apprenons PHP";
-Affichez le contenu de la variable
-Affichez ensuite le contenu de la variable en ayant supprimé tous les tags HTML.
+// 10
+$text10 = "Text de votre choix";
+$text10 = str_replace("choix", "rien", $text10);
+echo $text10;
+echo "<br><br>";
 
-Exo 8
-Créez une variable avec le texte de votre choix
-Faites en sorte qu'à gauche du texte, le caractère | s'affiche tant que la chaine ne fait pas 500 de longueur.
+// 11
+$text11 = "Text de votre test";
+$search = "test";
+$position = stripos($text11, $search);
+if ($position !== false){
+    echo "Bien trouver";
+}
+echo "<br><br>";
 
-Exo 9
-Créez une variable avec le texte de votre choix
-A l'aide d'une boucle, parcourez une à u ne les lettres de la chaînes
-et affichez les à l'écran. Chaque lettre sera affichée sur une ligne entière.
+// 12
+$text12 = "test de text et non de texte";
+$search = strpos($text12, "test", 0);
+if ($search !== false){
+    echo "Bien au debut";
+}
 
-Exo 10
-Créez une variable avec le texte de votre choix
-Utilisez la bonne méthode pour remplacer une portion du texte pas 'World'.
-La portion du texte à remplacer est au choix.
-
-Exo 11
-Créez une variable avec le texte de votre choix, cependant, le texte doit au moins contenir le mot 'test'
-A l'aide de la bonne function, vérifiez que le texte 'test' est bien présent.
-
-Exo 12
-Créez une fonction permettant de vérifier si du texte contenu dans une chaine de caractère est au début de cette chaine
-
-Exo 13
-Faire la même chose que l'exo 12, mais pour vérifier que la chaine se termine par la portion de texte.
-*/
+// 13
+$text13 = "test de text et non de texte";
+$search = strpos($text13, "texte", strlen($text13));
+if ($search !== false){
+    echo "Bien a la fin";
+}
 
 ?>
